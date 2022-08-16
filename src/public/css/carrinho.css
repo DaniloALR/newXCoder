@@ -1,0 +1,173 @@
+@import "header.css";
+@import "footer.css";
+
+.search-txt{
+    border: none;
+    background:none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color:white ;
+    font-size:16px;
+    transition: 0.4s;
+    line-height:5px;
+    width:350px;
+}
+.carrosel{
+    display:flex;
+    justify-content:space-between;
+    margin-left:10% ;
+    margin-right:10%;
+    margin-top:50px;
+}
+button.seta{
+        width: 20px;
+        height: 20px;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer
+    }
+    .divider-m {
+        border-bottom: 1px solid #323232;
+        margin: 0 4px 1rem 0.5px;
+        border-radius:2px;
+    }
+    .btn-continue{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30px;
+        border: none;
+        background-color: #4886FF;
+        border-radius:20px;
+    }
+    
+    .container-cep{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-bottom:3rem;
+        flex-direction: column;
+        padding: 25px;
+        color:white;
+    }
+    
+    .btn-continuar{
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        width: 100;
+        height: 30px;
+        border: none;
+        background-color: #4886FF;
+        border-radius:20px;
+    }
+    
+    .product-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 80px;
+    }
+    
+    .esquerda {
+        width: 80%;
+        border-bottom: 1px solid #323232;
+    }
+    
+    .direita {
+        background: red;
+        color:white;
+        width: 25%;
+        height: 100%;
+        background: gray;
+        display: flex;
+        flex-direction: column;
+        border-radius:10px ;
+        padding: 25px;
+        margin-right: 40px;
+        
+    }
+    .top {
+        width: 100%;
+        background: rgb(51, 5, 205);
+        height: 20px;
+        color:white;
+        justify-content: space-between;
+        display: flex;
+    }
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .price {
+        height: 160px;
+        width: 300px;
+    }
+    
+    .product {
+        height: 160px;
+        width: 300px;
+        
+    }
+    
+    .quantity {
+        height: 160px;
+        width: 600px;
+        
+    }
+    .product {
+        background: gray;
+        max-width: 180px;
+        margin: 0 auto;  
+    }
+    
+    table {
+        width: 100%;
+    }
+    
+    table th, table td {
+        text-align: center;
+        color:#FFF
+    }
+    
+    table{
+        border-collapse: collapse;
+    }
+    
+    thead {
+        border-bottom: 1px solid #323232;
+    }
+    
+    .container-flex {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    form.container-flex input[type='submit'] {
+        margin-left: 20px;
+        padding: 8px;
+        cursor: pointer;
+    }
+    
+    .produto-foto a{
+        text-decoration: none;
+        color: #FFF;
+    }    
+    .add-product {
+        text-align: center;
+    }
+    
+    tr input {
+            width: 3em;
+            background-color: gray;
+            border:none;
+    }
+    .flex-text{
+        display: flex;
+        justify-content: space-between;
+    }

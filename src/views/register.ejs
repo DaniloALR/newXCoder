@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/register.css">
+        <link
+        rel="shortcut icon"
+        href="/images/xcoder-black-background.ico"
+        type="image/x-icon"
+       />
+        <title>XCoder</title> 
+    </head>
+    <body>
+      <% if(!user) {%>
+        <%- include('./partials/header', {user: undefined}); %>
+    <% } else { %>
+        <%- include('./partials/header', {user: user}); %>
+    <% } %>
+        <div class="div-h1">
+            <h1 class="h1-1">Cadastrar dados pessoais</h1>
+
+        </div>
+        <main>
+            
+            <div class="container-register">
+          
+                <form action="/cadastro" method="POST">
+                  <div class="input-container">
+                    
+                    <input type="text" name="name" id="name" placeholder = "Nome">
+                  </div>
+          
+                  <div class="input-container">
+                    
+                    <input type="text" name="Sobrenome" id="Sobrenome" placeholder = "Sobrenome">
+                  </div>
+          
+                  <div class="input-container">
+                    
+                    <input type="email" name="email" id="email" placeholder = "E-mail">
+                  </div>
+          
+                  <div class="input-container">
+                    
+                    <input type="email-validation" name="email-validation" id="email-validation" placeholder = "Confirme seu e-mail">
+                  </div>
+          
+                  <div class="input-container">
+                    
+                    <input type="password" name="password" id="password" placeholder = "Senha">
+                  </div>
+          
+                  <div class="input-container">
+                    
+                    <input type="password" name="password-confirmation" id="password-confirmation" placeholder = "Confirme sua senha">
+                  </div>
+                        
+                
+                </form>
+        
+              </div>
+    
+              <div class="container-register">
+
+                <h3>Endereço</h2>
+
+                <form action="/cadastro" method="POST">
+                  <div class="input-container">
+                    <input type="text" name="rua" id="rua" placeholder = "Rua">
+                  </div>
+          
+                  <div class="input-container">
+                      <div class="teste2">
+                          
+                          <div>
+                              <input type="text" name="bairro" id="bairro" placeholder = "Bairro">
+                            </div>
+                            
+                            <div>
+                                <select type="city" name="Cidade" id="Cidade" placeholder = "Selecione sua cidade">
+                                    <option value="São Paulo">São Paulo</option>
+                                    <option value="Ceará">Ceará</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                    <option value="Porto Alegre">Porto Alegre</option>
+                                  </select>
+                              </div>
+                        
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="teste2">
+                        <div>
+                            <input type="number" name="numero" id="numero" placeholder = "Número">
+                        </div>
+                        
+                        <div>
+                            <input type="text" name="complemento" id="complemento" placeholder = "Complemento">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="input-container">
+                  <input type="postal-code" name="cep" id="cep" placeholder = "CEP">
+                </div>
+                
+                <input type="checkbox" id="salvarInfo"><label for="salvarInfo">Salvar informações pessoais ? </label>
+                <button>Cadastrar-se</button>
+                
+            </form>
+            
+        </div>
+        
+              
+    
+            </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+</html>

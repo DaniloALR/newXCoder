@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/paineldousuario.css">
+        <link
+        rel="shortcut icon"
+        href="/images/xcoder-black-background.ico"
+        type="image/x-icon"
+       />
+        <title>XCoder</title> 
+    </head>
+<body>
+    <% if(!user) {%>
+        <%- include('./partials/header', {user: undefined}); %>
+    <% } else { %>
+        <%- include('./partials/header', {user: user}); %>
+    <% } %>
+
+    <main>
+        <section class="container-info-user">
+            <div class="ft-avatar"></div>
+            <h1 class="username"><%= user.name %></h1>
+            <div class="div-edit-info">
+
+                <div class="edit-info">
+                    <a href="">Editar informações</a>
+                </div>
+                <div class="avaliacoes">
+                    <a href="">Minhas avaliações</a>
+                </div>
+                <div class="protocolo">
+                    <a href="">Protocolo</a>
+                </div>
+                <div class="enderecos">
+                    <a href="">Endereços</a>
+                </div>
+                <div class="deslogar">
+                    <a href="/logout" id="deslogar" name="deslogar">Deslogar</a>
+                </div>
+
+            </div>
+            <div class="div-atendimento-ao-cliente">
+                <h1>Atendimento ao cliente</h1>
+                <p>E-mail: xcoder@gmail.com</p>
+            </div>
+        </section>
+        <section class="container-tds-pedidos">
+            <div class="div-tds-pedidos">
+                <h1>Todos os pedidos</h1>
+            </div>
+            <div class="div-info-pedidos">
+                <div class="info-pedidos">
+                    <h3>Número do pedido</h3>
+                    <p>8172361</p>
+                </div>
+                <div class="divider-vert"></div>
+                <div class="info-pedidos">
+                    <h3>Data</h3>
+                    <p>17/02/2021</p>
+                </div>
+                <div class="divider-vert"></div>
+                <div class="info-pedidos">
+                    <h3>Pagamento</h3>
+                    <p>Boleto</p>
+                </div>
+                <div class="divider-vert"></div>
+                <div class="info-pedidos">
+                    <h3>Status</h3>
+                    <p>Enviado</p>
+                </div>
+                <div class="divider-vert"></div>
+                <div class="info-pedidos">
+                    <h3>NF</h3>
+                    <a href=""><img src="/images/Nota-fiscal.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="lista-de-desejos">
+                <h1>Lista de desejos</h1>
+            </div>
+            <div class="div-lista-de-desejos">
+                <a href="./produtoInterno"><img src="/images/headset-gamer.jpg" alt=""></a>
+                <div class="div-lista-desejos-produto">
+                    <a href="./produtoInterno">Headset gamer brabo</a>
+                    <a href="./produtoInterno">R$250,00</a>
+                </div>
+                <div class="div-btn-comprar">
+                    <a class="btn-adc-carrinho" href="">Adicionar no carrinho</a>
+                    <a class="btn-comprar" href="" id="btn-comprar">Comprar agora</a>
+                </div>
+            </div>
+        </section>
+        <div id="popup" class="popup">
+            <button class="popup-btn-x"><img src="/images/delete-icon.png" alt=""></button>
+            <h2 class="popup-h2">Confirme sua compra</h2>
+            <p class="popup-p">Imprima seu boleto abaixo para realizar sua compra</p>
+            <p class="popup-p">*Obs: a compra só será confirmada após o pagamento</p>
+            <a href="" class="popup-a">Imprimir boleto</a>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+
+    <script src="/javascript/script.js"></script>
+
+</body>
+</html>

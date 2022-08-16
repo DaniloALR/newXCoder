@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+@keyframes growup {
+    0% {
+        color: white;
+    }
+    100% {
+        color: #0B68F4;
+        font-size: 17px;
+    }
+}
+@keyframes growup-2 {
+    0% {
+        color: white;
+    }
+    100% {
+        color: #0B68F4;
+        font-size: 23px;
+    }
+}
+
+*{
+    font-family: 'Arimo', sans-serif;
+    text-decoration: none;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1130px){
+    .container-login {
+        flex-wrap: wrap;
+    }
+    .mouse-tecl-head a{
+        display: none
+    }
+}
+
+body{
+    background-color: #090909;
+    width: 100%;
+    overflow: overlay;
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0; left: 0; right: 0;
+
+}
+.header .logo img{
+    width: 7rem;
+    background-color: none;
+}
+.logo{
+    margin: 1.5rem 0 0 3rem;
+}
+.header .logo img:hover{
+    filter: invert(40%) sepia(100%) saturate(5899%) hue-rotate(212deg) brightness(102%) contrast(92%);
+    transition-duration: 0.1s;
+}
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .navbar a{
+    display: flex;
+    margin: 0 5rem 0 0;
+    color: white;
+}
+.header .navbar a:hover{
+    color: #0B68F4;
+    transition-duration: 0.1s;
+}
+.header div form{
+    max-width: 450px;
+    min-width: 450px;
+    width: 100%;
+    height: 2rem;
+
+    margin: 0 0 0 4rem;
+
+    background-color: #c4c4c4;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+.header div form input{
+    max-width: 450px;
+    width: 100%;
+    height: 2rem;
+    border: none;
+
+    text-align: center;
+
+    opacity: 0.5;
+    border-radius: 20px;
+}
+.container2 a{
+    color: white;
+    cursor: pointer;
+}
+.container2 a:hover{
+    color: #0B68F4;
+    transition-duration: 0.1s;
+}
+.preco-carrinho{
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: grey;
+}
+.header .container2{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+.container2 .username{
+    margin-right: 3rem;
+}
+
+.header .container2 .login{
+    margin: 0 0.5rem 0 0;
+}
+
+.header .container2 .carrinho img{
+    width: 40px;
+    max-width: 60px;
+    min-width: 40px;
+}
+.header .container2 .carrinho img:hover{
+    filter: invert(40%) sepia(100%) saturate(5899%) hue-rotate(212deg) brightness(102%) contrast(92%);
+    transition-duration: 0.1s;
+}

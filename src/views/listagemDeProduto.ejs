@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/listagemDeProduto.css">
+    <link
+    rel="shortcut icon"
+    href="/images/xcoder-black-background.ico"
+    type="image/x-icon"
+   />
+    <title>XCoder</title> 
+</head>
+<body>
+    <% if(!user) {%>
+        <%- include('./partials/header', {user: undefined}); %>
+    <% } else { %>
+        <%- include('./partials/header', {user: user}); %>
+    <% } %>
+
+    <main>
+        <section class="container-categorias">
+            <h1>Categorias</h1>
+            <ul class="list">
+                <li><a href="">Celulares</a></li>
+                <li><a href="">Teclado</a></li>
+                <li><a href="">Notebook</a></li>
+            </ul>
+            <h1>Marca</h1>
+            <ul class="list">
+                <li><a href="">Razer</a></li>
+                <li><a href="">Samsung</a></li>
+                <li><a href="">Asus</a></li>
+            </ul>
+            <h1>Avaliação</h1>
+            <h1>Faixa de Preço</h1>
+            <div class="container-preco-min-max">
+                <div class="container-preco-min">
+                    <label for="preco-min">De: </label>
+                    <input type="text" name="preco-min" id="preco-min" placeholder="R$">
+                </div>
+                <div class="container-preco-max">
+                    <label for="preco-max">Até: </label>
+                    <input type="text" name="preco-max" id="preco-max" placeholder="R$">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-headset">
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+            </div>
+            <div class="container-headset2">
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+            </div>
+            <div class="container-headset3">
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+                <a href=""><img src="/images/headset-gamer.jpg" alt=""><p>Headset gamer barato</p></a>
+            </div>
+        </section>
+        
+    </main>
+    <%- include('./partials/footer') %>
+</body>

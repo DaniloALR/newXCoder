@@ -1,0 +1,64 @@
+@import "header.css";
+@import "footer.css";
+
+main{
+    display: flex;
+}
+
+.container-categorias h1{
+    font-size: 30px;
+    color: #FFFFFF;
+
+    margin: 3rem 3rem;
+}
+.container-categorias li a{
+    color: #fff;
+    margin: 1.5rem 2rem;
+    line-height: 30px;
+}
+.container-categorias li a:hover{
+    color: #0B68F4;
+    transition-duration: 0.1s;
+}
+.container-categorias label{
+    font-size: 18px;
+    line-height: 30px;
+
+    color:#fff;
+}
+.container-preco-min{
+    margin-left: 35px;
+}
+.container-preco-max{
+    margin-left: 35px;
+}
+.container-preco-min-max div input{
+    width: 30%;
+    height: 20px;
+
+    margin-left: 5px;
+
+    border-radius: 15px;
+    border: none;
+
+    text-align: center;
+    opacity: 0.7;
+}
+.container-headset, .container-headset2, .container-headset3{
+    display: flex;
+    margin-top: 40px;
+}
+.container-headset a img, .container-headset2 a img, .container-headset3 a img{
+    width: 210px;
+    border-radius: 20px;
+}
+.container-headset a, .container-headset2 a, .container-headset3 a{
+    margin-left: 30px;
+    margin-right: 20px;
+}
+.container-headset p, .container-headset2 p, .container-headset3 p{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 4px;
+    color: white;
+}

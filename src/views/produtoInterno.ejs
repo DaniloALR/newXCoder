@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/produtoInterno.css">
+        <link
+        rel="shortcut icon"
+        href="/images/xcoder-black-background.ico"
+        type="image/x-icon"
+       />
+        <title>XCoder</title> 
+    </head>
+<body>
+    <% if(!user) {%>
+        <%- include('./partials/header', {user: undefined}); %>
+    <% } else { %>
+        <%- include('./partials/header', {user: user}); %>
+    <% } %>
+
+    <main>
+        <section class="container-product">
+            <div class="div-seta">
+                <button type="button"><img class="seta" src="/images/arrow-left-circle.svg" alt=""></button>
+            </div>
+            <div class="div-img-product">
+
+
+                <div>
+                    <img class="img-principal" src="/images/headset-gamer.jpg" alt="">
+                </div>
+                <img class="img-m" src="/images/headset-gamer.jpg" alt="">
+                <img class="img-m" src="/images/headset-gamer.jpg" alt="">
+                <img class="img-m" src="/images/headset-gamer.jpg" alt="">
+                <img class="img-m" src="/images/headset-gamer.jpg" alt="">
+
+                
+            </div>
+            <div class="div-seta">
+                <button type="button"><img class="seta-right" src="/images/arrow-right-circle.svg" alt=""></button>
+            </div>
+
+            <div class="div-buy-product">
+                <h2>Headset Gamer</h2>
+                <h1>R$250</h1>
+                <div class="div-cep-qtd">
+                    
+                        <input class="cep" type="number" placeholder="CEP">
+
+                    
+                        <button class="btn-min">-</button>
+                    <div class="div-qtd">
+                        <input type="text" placeholder="Qtd">
+                    </div>
+                        <button class="btn-max">+</button>
+                </div>
+                <div class="div-env-vend">
+                    <p class="p-env">Enviado por: xCoder</p>
+                    <p>Vendido por: xCoder</p>
+                </div>
+                <div class="container-comprar-adc">
+                    <div class="div-comprar-adc">
+                        <button type="button" href="/carrinho" class="btn-adc">Adicionar ao carrinho</button>
+                        <button type="button" href="/finalizeCompra" class="btn-buy">Comprar agora</button>
+                    </div>
+                    <div>
+
+                        <input type="checkbox" name="presentear" id="">
+                        <label for="presentear">Comprar como presente</label>
+                    </div>
+                </div>
+                <div class="divider-m"></div>
+
+                    <button type="button" formaction="http://localhost:3000/paineldousuario" class="btn-adc-lista-desejo">Adicionar à lista de desejo</button>
+
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section class="container-desc-prod">
+            <div class="div-descricao-prod">
+                <h1>Descrição do produto</h1>
+                <div class="div-list-atributo">
+                    <ul class="list-atributo">
+                        <li>Marca</li>
+                        <li>Fone de ouvido</li>
+                        <li>Microfone</li>
+                        <li>Recursos</li>
+                        <li>Garantia</li>
+                    </ul>
+
+                
+                
+                    <ul class="list-result-atributo">
+                        <li>Deus Gamer</li>
+                        <li>Estereo - 20Hz/20KHz</li>
+                        <li>Sensibilidade: -42 ± 3 dB</li>
+                        <li>RGB Rainbow</li>
+                        <li>1 ano</li>
+                    </ul>
+
+                </div>
+                    
+            </div>
+            <div class="div-compre-com">
+                <h1>Compre com:</h1>
+                <div class="div-other-prod">
+                    <a href="/produtointerno"><img src="/images/mouse-gamer.webp" alt=""></a>
+                    <div>+</div>
+                    <a href="/produtointerno"><img src="/images/teclado-gamer.webp" alt=""></a>
+                </div>
+                <div class="container-div-check">
+                    <div class="div-check">
+                        <div class="div-check-1">
+    
+                            <input type="checkbox" name="adcitem" id="">
+                            <label for="adcitem">Outro item: <strong>R$170,00</strong></label>
+                        </div>
+                        <div class="div-check-2">
+    
+                            <input type="checkbox" name="adcitem" id="">
+                            <label for="adcitem">Outro item: <strong>R$200,00</strong></label>
+                        </div>
+                    </div>
+                    <div class="divider-vert"></div>
+                    <div class="div-preco-total">
+                        <p>Preço total: <strong>R$370,00</strong></p>
+                        <button>Adicionar todos no carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <h1 class="produtos-relacionados">Produtos relacionados</h1>
+        <section class="container-lista-de-promocao">
+            <div>
+                <button type="button"><img class="seta" src="/images/arrow-left-circle.svg" alt=""></button>
+            </div>
+            
+            <div class="div-lista-de-promocao">
+                <a href="./produtointerno"><img  class="img-mouse1" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                <div class="div-price">
+                    <a href="" class="price">R$150</a>
+                </div>
+                
+            </div>
+            <div class="div-lista-de-promocao">
+                <a href="./produtointerno"><img  class="img-mouse2" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                <div class="div-price">
+                    <a href="" class="price">R$150</a>
+                </div>
+            </div>
+            <div class="div-lista-de-promocao">
+                <a href="./produtointerno"><img  class="img-mouse3" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                <div class="div-price">
+                    <a href="" class="price">R$150</a>
+                </div>
+            </div>
+            <div class="div-lista-de-promocao">
+                <a href="./produtointerno"><img  class="img-mouse4" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                <div class="div-price">
+                    <a href="" class="price">R$150</a>
+                </div>
+            </div>
+            <div class="div-lista-de-promocao">
+                <a href="./produtointerno"><img  class="img-mouse5" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                <div class="div-price">
+                    <a href="" class="price">R$150</a>
+                </div>
+            </div>
+            <div class="div-lista-de-promocao">
+                <a href="./produtointerno"><img  class="img-mouse6" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                <div class="div-price">
+                    <a href="" class="price">R$150</a>
+                </div>
+            </div>
+            <div>
+                <button type="button"><img class="seta" src="/images/arrow-right-circle.svg" alt=""></button>
+            </div>
+    
+        </section>
+        <div class="divider"></div>
+        <section class="container-avaliacoes">
+            <div class="container-all-avaliacoes">
+
+                <div class="div-avaliacoes">
+
+                    <h1>Avaliações</h1>
+                    <p>400 classificações</p>
+
+                    <div class="container-estrelas">
+
+                        <div class="div-estrelas">
+                            <ul>
+                                <li>5 estrelas</li>
+                                <li>4 estrelas</li>
+                                <li>3 estrelas</li>
+                                <li>2 estrelas</li>
+                                <li>1 estrela</li>
+                            </ul>
+                        </div>
+
+                        <div class="porcentagem-estrelas">
+                            <div class="tabela-porcentagem"><div class="total-porcentagem">81%</div></div>
+                            <div class="tabela-porcentagem"><div class="total-porcentagem2">12%</div></div>
+                            <div class="tabela-porcentagem"><div class="total-porcentagem3">2%</div></div>
+                            <div class="tabela-porcentagem"></div>
+                            <div class="tabela-porcentagem"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="divider-menor"></div>
+
+                <div class="div-avalie-esse-produto">
+                    <h1>Avalie esse produto</h1>
+                    <input type="text" placeholder="Deixe um comentario">
+                </div>
+
+            </div>
+            <div>
+                <div class="div-perguntas-frequentes">
+                    <h1>Perguntas frequentes</h1>
+                    <div class="div-faca-pergunta">
+                        <p>Faça uma pergunta:</p>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="container-perguntas">
+
+                    <div class="div-perguntas">
+                        <p>Pergunta:</p>
+                        <p>Resposta:</p>
+                    </div>
+                    <div class="divider-perguntas"></div>
+                    <div class="div-perguntas">
+                        <p>Pergunta:</p>
+                        <p>Resposta:</p>
+                    </div>
+                    <div class="divider-perguntas"></div>
+                    <div class="div-perguntas">
+                        <p>Pergunta:</p>
+                        <p>Resposta:</p>
+                    </div>
+                    <div class="divider-perguntas"></div>
+                </div>
+            </div>
+
+        </section>
+        <div class="divider"></div>
+        <section class="container-all-inspirado-no-historico">
+            <h1>Inspirado no seu historico de navegação</h1>
+            <div class="container-inspirado-no-historico">
+    
+                <div>
+                    <button type="button"><img class="seta" src="/images/arrow-left-circle.svg" alt=""></button>
+                </div>
+                
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>  
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+    
+                <div>
+                    <button type="button"><img class="seta" src="/images/arrow-right-circle.svg" alt=""></button>
+                </div>
+    
+            </div>  
+    
+            
+            
+        </section>
+
+        <%- include('./partials/footer') %>
+    </main>
+</body>
+</html>

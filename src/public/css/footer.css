@@ -1,0 +1,28 @@
+.divider{
+    border: 1px solid #323232;
+    margin: 8rem 4rem 3rem 4rem;
+    border-radius:2px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 40% 2.5rem 10%;
+}
+footer a{
+    font-size: 16px;
+    line-height: 21px;
+    color: white;
+}
+footer a:hover{
+    color: #0B68F4; 
+    transition-duration: 0.1s;
+}
+::-webkit-scrollbar{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #191919;
+    border-radius: 20px;
+}

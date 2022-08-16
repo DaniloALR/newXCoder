@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link
+        rel="shortcut icon"
+        href="/images/xcoder-black-background.ico"
+        type="image/x-icon"
+       />
+        <title>XCoder</title> 
+    </head>
+    
+<body>
+
+    <% if(!user) {%>
+        <%- include('./partials/header', {user: undefined}); %>
+    <% } else { %>
+        <%- include('./partials/header', {user: user}); %>
+    <% } %>
+    
+    <main>
+        
+            <h1 class="destaque-semanal">Destaque da semana</h1>
+        
+        <section class="section-main-content">
+            <div class="div-destaque-semanal">
+                <div class="main-content-dtq">
+                     
+                    <div class="container-img-destaque-semanal">
+                        <div class="div-img-destaque-semanal">
+                            <a href="./produtointerno"><img  class="img-destaque-semanal" src="/images/cadeira-gamer-gt-black-lp01.webp" alt=""></a>
+                        </div>
+                        
+                        <div class="mouse-tecl-head">
+                            <a href="./produtointerno"><img  class="img-mouse" src="/images/mouse-gamer.webp" alt=""></a>
+                            <a href="./produtointerno"><img  class="img-teclado" src="/images/teclado-gamer.webp" alt=""></a>
+                            <a href="./produtointerno"><img  class="img-headset" src="/images/headset-gamer.jpg" alt=""></a>
+                        </div>
+                    </div>       
+                </div>
+                <div class="container-seta-destaque">
+                    <div class="seta-destaque1">
+                        <button type="button"><img class="seta" src="/images/arrow-left-circle.svg" alt=""></button>
+                    </div>
+                    <div class="seta-destaque2">
+                        <button type="button"><img class="seta" src="/images/arrow-right-circle.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+            
+    <section class="section-lista-de-promocao">
+
+        <div>
+             <h1 class="lista-de-promocao">Lista de promoção</h1>
+        </div>
+         <div class="container-lista-de-promocao">
+             <div>
+                 <button type="button"><img class="seta" src="/images/arrow-left-circle.svg" alt=""></button>
+             </div>
+             
+             <div class="div-lista-de-promocao">
+                 <a href="./produtointerno"><img  class="img-mouse1" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                 <div class="div-price">
+                     <a href="" class="price">R$150</a>
+                 </div>
+                 
+             </div>
+             <div class="div-lista-de-promocao">
+                 <a href="./produtointerno"><img  class="img-mouse2" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                 <div class="div-price">
+                     <a href="" class="price">R$150</a>
+                 </div>
+             </div>
+             <div class="div-lista-de-promocao">
+                 <a href="./produtointerno"><img  class="img-mouse3" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                 <div class="div-price">
+                     <a href="" class="price">R$150</a>
+                 </div>
+             </div>
+             <div class="div-lista-de-promocao">
+                 <a href="./produtointerno"><img  class="img-mouse4" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                 <div class="div-price">
+                     <a href="" class="price">R$150</a>
+                 </div>
+             </div>
+             <div class="div-lista-de-promocao">
+                 <a href="./produtointerno"><img  class="img-mouse5" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                 <div class="div-price">
+                     <a href="" class="price">R$150</a>
+                 </div>
+             </div>
+             <div class="div-lista-de-promocao">
+                 <a href="./produtointerno"><img  class="img-mouse6" src="/images/mouse-gamer.webp" alt=""><p>Mouse gamer brabo</p></a>
+                 <div class="div-price">
+                     <a href="" class="price">R$150</a>
+                 </div>
+             </div>
+             <div>
+                 <button type="button"><img class="seta" src="/images/arrow-right-circle.svg" alt=""></button>
+             </div>
+     
+         </div>  
+    </section>
+        <section>
+            <h1>Turbine sua gameplay com</h1>
+            <div class="container-turbine-sua-gplay">
+    
+                <div>
+                    <button type="button"><img class="seta" src="/images/arrow-left-circle.svg" alt=""></button>
+                </div>
+                
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>  
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+                <div>
+                    <a href="./produtointerno"><img src="/images/redragon.webp" alt=""></a>
+                </div>
+    
+                <div>
+                    <button type="button"><img class="seta" src="/images/arrow-right-circle.svg" alt=""></button>
+                </div>
+    
+            </div>  
+    
+            
+            
+        </section> 
+    </main>
+
+    <%- include('./partials/footer') %>
+    
+</body>
+</html>

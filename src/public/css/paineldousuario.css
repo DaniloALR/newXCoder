@@ -1,0 +1,221 @@
+@import "header.css";
+@import "footer.css";
+
+main {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 4rem;
+}
+h1{
+    color: #fff;
+}
+.container-info-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 10%;
+}
+.container-info-user .username{
+    margin: 30px 0 50px;
+
+}
+.ft-avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    background-color: #c4c4c4;
+}
+.div-edit-info{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+
+    width: 280px;
+    border-radius: 20px;
+
+    background-color: #191919;
+}
+.div-edit-info a{
+    width: 100%;
+    color: #fff;
+}
+.div-edit-info div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 20px;
+
+    height: 30px;
+
+    background-color: #4D4D4D;
+    
+    margin: 10px 10px;
+}
+.div-edit-info input{
+    width: 100%;
+    color: #fff;
+
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+
+    cursor: pointer
+}
+.div-atendimento-ao-cliente{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    margin-top: 30px;
+    padding: 10px;
+
+    width: 280px;
+    border-radius: 20px;
+    background-color: #4D4D4D
+}
+.div-atendimento-ao-cliente h1{
+    margin-bottom: 10px;
+}
+.div-atendimento-ao-cliente p{
+    color: #fff;
+}
+.container-tds-pedidos{
+    background-color: #191919;
+    padding: 20px;
+    border-radius: 20px;
+}
+.div-tds-pedidos{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+
+    border-radius: 20px;
+    background-color: #373737;
+
+    padding: 20px
+}
+
+.info-pedidos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0 15px 0 15px;
+}  
+.div-info-pedidos{
+    display: flex;
+    margin-top: 20px;
+}
+.div-info-pedidos h3{
+    color: #fff;
+    margin-bottom: 30px;
+} 
+.div-info-pedidos p{
+    color: #fff;
+}
+.divider-vert{
+    border-right: 2px solid #323232;
+    margin: 0 3rem 0 3rem;
+    border-radius:2px;
+}
+.lista-de-desejos{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+    background-color: #373737;
+
+    padding: 20px
+}
+.div-lista-de-desejos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.div-lista-de-desejos img{
+    width: 170px;
+    border-radius: 20px
+}
+.div-lista-desejos-produto{
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    margin-left: 20px
+}
+.div-lista-desejos-produto a{
+    color: white;
+}
+.div-btn-comprar{
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 40%;
+}
+.div-btn-comprar a{
+    width: 200px;
+    height: 30px;
+
+    color: #000000;
+
+    border-radius: 17px;
+    border: none;
+    
+    margin: 3px;
+
+    font-weight: bold;
+}
+.btn-adc-carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F4EF3;
+}
+.btn-comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4886FF;
+}
+
+.popup{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    gap: 30px;
+    background-color: #090909;
+
+    width: 300px;
+    height: 320px;
+
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid grey
+}
+.popup .popup-h2, .popup-p, .popup-a{
+    color: #fff;
+}
+.popup a{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.popup-btn-x img{
+    width: 20px;
+    background-color: transparent;
+}

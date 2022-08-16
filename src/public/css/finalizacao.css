@@ -1,0 +1,129 @@
+@import "header.css";
+@import "footer.css";
+
+.produto-finalizacao{
+    display: inline;
+    margin-top: 10%;
+    margin-left: 6%;
+    width: 400px;
+
+    box-shadow: 10px 5px 5px black;;
+
+    border-radius: 20px;
+}
+.div-img-produto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-nome-produto{
+    margin: 400px 0 0 18px;
+}
+.nome-produto{
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+
+    color: #FFFFFF;
+
+}
+.vendido-por{
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+    opacity: 0.75;
+}
+.status-prod{
+    width: 430px;
+    height: 480px;
+    margin: 8rem 8rem 0 14rem;
+    background-color: #7f7f7f;
+
+    border-radius: 50px;
+}
+.status-prod h1{
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 39px;
+    color: white;
+}
+.div-p{
+    margin-left: 43px;
+}
+.p-headset{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 29px;
+    color: white;
+    margin-top: 46px;
+}
+
+.p-preco-head{
+    font-weight: 400;
+    line-height: 39px;
+    text-decoration-line: line-through;
+
+    color: #FFFFFF;
+
+    opacity: 0.5;
+}
+.p-preco-desc-head{
+    font-weight: 400;
+    line-height: 25px;
+
+    color: #FFFFFF;
+}
+.p-parcelas{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+.div-preco{
+    margin-top: 21px;
+    font-size:28px;
+}
+.p-previsao-entrega{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+
+    margin-top: 17px;
+}
+.p-data-entrega{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+
+    margin-top: 9px;
+
+    color: #FFFFFF;
+
+    opacity: 0.6;
+}
+.p-visu-produto{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin-top: 55px;
+}
+.p-visu-produto a{
+    color: white
+}
