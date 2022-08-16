@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const router = require('./src/routes/index')
+const loginRouter = require('./src/routes/loginRoutes')
+const registerRouter = require('./src/routes/registerRoutes')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
@@ -17,6 +19,9 @@ app.use(session({
 }))
 
 app.use(express.static(path.join(__dirname,'src', 'public')))
+
 app.use('/', router)
+app.use('/login', loginRouter)
+app.use('/register', registerRouter)
 
 app.listen(3000, ()=>{console.log('servidor rodando na porta 3000')})
