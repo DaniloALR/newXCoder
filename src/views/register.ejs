@@ -13,13 +13,14 @@
         <title>XCoder</title> 
     </head>
     <body>
-      <% if(!user) {%>
+      <% if(typeof user==='undefined' ) {%>
         <%- include('./partials/header', {user: undefined}); %>
-    <% } else { %>
-        <%- include('./partials/header', {user: user}); %>
-    <% } %>
+          <% } else { %>
+            <%- include('./partials/header', {user: user}); %>
+              <% } %>
         <div class="div-h1">
             <h1 class="h1-1">Cadastrar dados pessoais</h1>
+
 
         </div>
         <main>
@@ -29,22 +30,22 @@
                 <form action="/register" method="POST">
                   <div class="input-container">
                     
-                    <input type="text" name="name" id="name" placeholder = "Nome">
+                    <input type="text" name="name" id="name" placeholder = "Nome" required>
                   </div>
           
                   <div class="input-container">
                     
-                    <input type="text" name="Sobrenome" id="Sobrenome" placeholder = "Sobrenome">
+                    <input type="text" name="Sobrenome" id="Sobrenome" placeholder = "Sobrenome" required>
                   </div>
           
                   <div class="input-container">
                     
-                    <input type="email" name="email" id="email" placeholder = "E-mail">
+                    <input type="email" name="email" id="email" placeholder = "E-mail" required>
                   </div>
           
                   <div class="input-container">
                     
-                    <input type="email-validation" name="email-validation" id="email-validation" placeholder = "Confirme seu e-mail">
+                    <input type="email-validation" name="email-validation" id="email-validation" placeholder = "Confirme seu e-mail" required>
                   </div>
           
                   <div class="input-container">
@@ -68,18 +69,18 @@
 
                 <form action="/register" method="POST">
                   <div class="input-container">
-                    <input type="text" name="rua" id="rua" placeholder = "Rua">
+                    <input type="text" name="rua" id="rua" placeholder = "Rua" required>
                   </div>
           
                   <div class="input-container">
                       <div class="teste2">
                           
                           <div>
-                              <input type="text" name="bairro" id="bairro" placeholder = "Bairro">
+                              <input type="text" name="bairro" id="bairro" placeholder = "Bairro" required>
                             </div>
                             
                             <div>
-                                <select type="city" name="Cidade" id="Cidade" placeholder = "Selecione sua cidade">
+                                <select type="city" name="Cidade" id="Cidade" placeholder = "Selecione sua cidade" required>
                                     <option value="São Paulo">São Paulo</option>
                                     <option value="Ceará">Ceará</option>
                                     <option value="Rio de Janeiro">Rio de Janeiro</option>
@@ -92,21 +93,21 @@
                 <div class="input-container">
                     <div class="teste2">
                         <div>
-                            <input type="number" name="numero" id="numero" placeholder = "Número">
+                            <input type="number" name="numero" id="numero" placeholder = "Número" required>
                         </div>
                         
                         <div>
-                            <input type="text" name="complemento" id="complemento" placeholder = "Complemento">
+                            <input type="text" name="complemento" id="complemento" placeholder = "Complemento" required>
                         </div>
                         
                         
                     </div>
                 </div>
                 <div class="input-container">
-                  <input type="postal-code" name="cep" id="cep" placeholder = "CEP">
+                  <input type="postal-code" name="cep" id="cep" placeholder = "CEP" required>
                 </div>
                 
-                <input type="checkbox" id="salvarInfo"><label for="salvarInfo">Salvar informações pessoais ? </label>
+                <input type="checkbox" id="salvarInfo"><label for="salvarInfo">Salvar informações pessoais ? </label required>
                 <button>Cadastrar-se</button>
                 
             </form>

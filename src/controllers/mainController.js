@@ -5,11 +5,15 @@
 
 
 const mainController = {
-    home: (req,res)=>{
-        res.render('home', {user: req.session.user})
+    home: (req,res)=> {
+        if (req.user) {
+            res.render('home', {user: req.user})
+        }
+
+        res.render('home')
     },
     listaDeDesejos: (req,res)=>{
-        res.render('listaDeDesejos', {user: req.session.user})
+        res.render('listaDeDesejos', {user: req.user})
     },
     produtoInterno: (req,res)=>{
         res.render('produtoInterno', {user: req.session.user})
