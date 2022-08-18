@@ -13,11 +13,11 @@
         <title>XCoder</title> 
     </head>
 <body>
-    <% if(!user) {%>
+    <% if(typeof user==='undefined' ) {%>
         <%- include('./partials/header', {user: undefined}); %>
-    <% } else { %>
-        <%- include('./partials/header', {user: user}); %>
-    <% } %>
+          <% } else { %>
+            <%- include('./partials/header', {user: user}); %>
+              <% } %>
 
     <main>
         <section class="container-product">

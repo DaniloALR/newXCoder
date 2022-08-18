@@ -1,9 +1,23 @@
-// const { body } = require('express-validator')
+const verifyIfUserIsLogged = (req, res, next) => {
+    // 1. Ver se o usuário existe na sessão ou no cookie
+        // Se o usuário não existir, eu direciono pro login
+    if(!req.session.user && !req.cookies.salvarInfo) {
+        return res.redirect('/login');
+    }
 
-// const validacoes = [
-//     body('email').isEmail().notEmpty.withMessage('Esse campo não pode ser vazio').bail().trim(),
+    console.log(req.session.user)
+    console.log(req.cookies.salvarInfo)
 
-//     body('senha').notEmpty.withMessage('Esse campo não pode ser vazio').bail().trim()
-// ]
+    // Se ele existir, deixo o middleware passar
+    const user = req.session.user ? 
+        JSON.parse(req.session.user) : 
+        JSON.parse(req.cookies.salvarInfo)
 
-// module.exports = validacoes
+        console.log(user)
+
+    req.user = user
+
+    next()
+}
+
+module.exports = verifyIfUserIsLogged

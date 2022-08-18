@@ -1,4 +1,4 @@
-<header class="header">   
+<header class="header">
 
     <div class="container">
 
@@ -9,30 +9,36 @@
         </form>
 
         <div class="container2">
-            
-            <% if(!user) {%>
+
+            <% if(typeof user==='undefined' ) {%>
                 <div class="container2">
                     <a href="./login" class="login" name="login">Log in </a>
                     <a href="./register" class="register" name="register"> Sign up</a>
                 </div>
-            <% } else { %>
-                <a href="./paineldousuario" class="username"><%= user.name %></a>
-            <% } %>
-            <div>
-                <% if(user){ %>
-                    <a class="carrinho" href="./carrinho"><img src="/images/cart.svg" alt="carrinhoDeCompras"></a>
                 <% } else { %>
-                    <a class="carrinho" href="./login"><img src="/images/cart.svg" alt="carrinhoDeCompras"></a>
+                    <a href="./paineldousuario" class="username">
+                        <%= user.nome %>
+                    </a>
                     <% } %>
+                        <div>
+                            <% if(user){ %>
+                                <a class="carrinho" href="./carrinho"><img src="/images/cart.svg"
+                                        alt="carrinhoDeCompras"></a>
+                                <% } else { %>
+                                    <a class="carrinho" href="./login"><img src="/images/cart.svg"
+                                            alt="carrinhoDeCompras"></a>
+                                    <% } %>
 
-                    <% if(user) { %>
-                        <div class="preco-carrinho"><p>$250</p></div>
-                   <% } %>
-            </div>
-        </div>  
+                                        <% if(user) { %>
+                                            <div class="preco-carrinho">
+                                                <p>$250</p>
+                                            </div>
+                                            <% } %>
+                        </div>
+        </div>
 
     </div>
-                 
+
     <nav class="navbar">
         <a id="colecionaveis" href="./listagemDeProduto">Colecionáveis</a>
         <a id="informatica" href="./listagemDeProduto">Informática</a>

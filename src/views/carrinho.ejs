@@ -1,114 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/carrinho.css">
-        <link
-        rel="shortcut icon"
-        href="/images/xcoder-black-background.ico"
-        type="image/x-icon"
-       />
-        <title>XCoder</title> 
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/carrinho.css">
+    <link rel="shortcut icon" href="/images/xcoder-black-background.ico" type="image/x-icon" />
+    <title>XCoder</title>
+</head>
+
 <body>
-    <%- include('./partials/header') %>   
-<main>
-    <div class="carrosel">
-        <button><img class="seta" src="/images/seta-left.svg" alt=""></button>
-        <img src="images.png" alt="">
-        <img src="images.png" alt="">
-        <img src="images.png" alt="">
-        <img src="images.png" alt="">
-        <img src="images.png" alt="">
-        <button> <img class="seta" src="/images/seta-right.svg" alt=""></button>
-    </div>
+    <% if(typeof user==='undefined' ) {%>
+        <%- include('./partials/header', {user: undefined}); %>
+            <% } else { %>
+                <%- include('./partials/header', {user: user}); %>
+                    <% } %>
+                        <main>
+                            <div class="carrosel">
+                                <button><img class="seta" src="/images/seta-left.svg" alt=""></button>
+                                <img src="images.png" alt="">
+                                <img src="images.png" alt="">
+                                <img src="images.png" alt="">
+                                <img src="images.png" alt="">
+                                <img src="images.png" alt="">
+                                <button> <img class="seta" src="/images/seta-right.svg" alt=""></button>
+                            </div>
 
-    <div class="product-container">
-        <div class="esquerda">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Imagem</th>
-                        <th>Produto</th>
-                        <th>Qtd</th>
-                        <th>Preço</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="product"><img src="/images/headset-gamer.jpg" alt=""></div>
-                        </td>
-                        <td>Acer Nitro 5, SSD128GB, 16GbRam, RTX 3050</td>
-                        <td><input type="number"></td>
-                        <td>R$ 4.500,00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <div class="direita">
+                            <div class="product-container">
+                                <div class="esquerda">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Imagem</th>
+                                                <th>Produto</th>
+                                                <th>Qtd</th>
+                                                <th>Preço</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="product"></div>
+                                                </td>
+                                                <td>Acer Nitro 5, SSD128GB, 16GbRam, RTX 3050</td>
+                                                <td><input type="number"></td>
+                                                <td>R$ 4.500,00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-            <h2>Resumo do pedido</h2>
-            <div>
+                                <div class="direita">
 
-                <div class="flex-text">
-                <p id="jogos" href="./menu/jogos" class="">
-                    <strong>Produto</strong>
-                </p>
-                <span>R$5.124,00</span>
-            </div>
+                                    <h2>Resumo do pedido</h2>
+                                    <div>
 
-                <div class="flex-text">
-                    <p id="jogos" href="./menu/jogos" class="">
-                        <strong>Frete</strong>
-                    </p>
-                    <span>R$ 124,00</span>
-                </div>
+                                        <div class="flex-text">
+                                            <p id="jogos" href="./menu/jogos" class="">
+                                                <strong>Produto</strong>
+                                            </p>
+                                            <span>R$5.124,00</span>
+                                        </div>
 
-                <div class="flex-text">
-                <p id="jogos" href="./menu/jogos" class="">
-                    <strong>Prazo</strong> 
-                </p>
-                <span>10 dias</span>
-                </div>
+                                        <div class="flex-text">
+                                            <p id="jogos" href="./menu/jogos" class="">
+                                                <strong>Frete</strong>
+                                            </p>
+                                            <span>R$ 124,00</span>
+                                        </div>
 
-                <div class="divider-m"></div>
+                                        <div class="flex-text">
+                                            <p id="jogos" href="./menu/jogos" class="">
+                                                <strong>Prazo</strong>
+                                            </p>
+                                            <span>10 dias</span>
+                                        </div>
 
-                <div class="flex-text">
-                    <p id="jogos" href="./menu/jogos" class="">
-                    <strong>Total</strong>
-                     </p><span>R$ 5.124,00
-                    </span></div>
+                                        <div class="divider-m"></div>
 
-                <p>Em 1x no cartão R$ 5.250,98 em até 12x</p>
-                <div class="divider-m"></div>
-                <form class="container-flex" action="/paineldousuario" method="get">
-                    <input type="submit" value="Continuar" class="btn-continue">
-                </form>
-                <p class="add-product">adicionar produtos</p>
-            </div>
-        </div>
-    </div>
+                                        <div class="flex-text">
+                                            <p id="jogos" href="./menu/jogos" class="">
+                                                <strong>Total</strong>
+                                            </p><span>R$ 5.124,00
+                                            </span>
+                                        </div>
+
+                                        <p>Em 1x no cartão R$ 5.250,98 em até 12x</p>
+                                        <div class="divider-m"></div>
+                                        <form class="container-flex" action="/paineldousuario" method="get">
+                                            <input type="submit" value="Continuar" class="btn-continue">
+                                        </form>
+                                        <p class="add-product">adicionar produtos</p>
+                                    </div>
+                                </div>
+                            </div>
 
 
-    <div class="container-cep">
+                            <div class="container-cep">
 
-        <p id="jogos" href="./menu/jogos"> Calcule frete prazo </p>
-        <form class="container-flex" action="" method="get">
-            <input type="number" name="CEP" id="search" placeholder="Cep">
-            <input type="submit" value="Continuar" class="btn-continuar">
-        </form>
-        <div class="produto-foto">
-            <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">
-                Não sei o cep
-            </a>
-        </div>
-    </div>
+                                <p id="jogos" href="./menu/jogos"> Calcule frete prazo </p>
+                                <form class="container-flex" action="" method="get">
+                                    <input type="number" name="CEP" id="search" placeholder="Cep">
+                                    <input type="submit" value="Continuar" class="btn-continuar">
+                                </form>
+                                <div class="produto-foto">
+                                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">
+                                        Não sei o cep
+                                    </a>
+                                </div>
+                            </div>
 
-</main>
-<%- include('./partials/footer') %>
+                        </main>
+                        <%- include('./partials/footer') %>
 </body>
+
 </html>
