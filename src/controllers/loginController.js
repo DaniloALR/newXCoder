@@ -15,9 +15,6 @@ const loginController = {
             return res.render('login', {errors: errors.mapped()})
         };
         
-        if(email == ""){
-            res.redirect("/login")
-        }
 
         const usersExist = users.find(usuario => {
             return usuario.email === email && usuario.senha == senha

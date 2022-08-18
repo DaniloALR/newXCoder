@@ -1,7 +1,6 @@
 let abrir = document.getElementById('btn-comprar');
 let popupbtn = document.getElementById('popup-btn-x');
-let emailLogin = document.getElementById('email');
-let senhaLogin = document.getElementById('senha');
+
 let formlogin = document.getElementById('form-login')
 
 
@@ -23,8 +22,4 @@ popupbtn.addEventListener('click', function(event) {
     if(event.target){
         abrirPopup.style.display = 'none'
     }
-})
-
-formlogin.addEventListener('submit', function(event) {
-    event.preventDefault()
 })
