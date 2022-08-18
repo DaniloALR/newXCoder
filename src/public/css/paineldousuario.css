@@ -218,4 +218,19 @@ h1{
 .popup-btn-x img{
     width: 20px;
     background-color: transparent;
+    border-radius: 50%;
+}
+.popup-btn-x{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    padding: 1px;
+    border-radius: 50%;
+}
+.div-popup-btn{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 40px
 }

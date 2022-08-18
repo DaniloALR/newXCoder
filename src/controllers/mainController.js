@@ -8,9 +8,6 @@ const mainController = {
     home: (req,res)=>{
         res.render('home', {user: req.session.user})
     },
-    register: (req,res)=>{
-        res.render('register', {user: req.session.user})
-    },
     listaDeDesejos: (req,res)=>{
         res.render('listaDeDesejos', {user: req.session.user})
     },

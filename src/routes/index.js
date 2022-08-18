@@ -1,15 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const mainController = require('../controllers/mainController')
-const loginController = require('../controllers/loginController')
+const mainController = require('../controllers/mainController');
+const loginController = require('../controllers/loginController');
+const registerController = require('../controllers/registerController');
 const { body } = require('express-validator')
 
 const validacoes = [
     body('email')
         .notEmpty()
-        .withMessage('Email não pode ser vazio')
-        .bail()
-        .trim(),
+        .withMessage('Email não pode ser vazio'),
 
     body('senha')
         .notEmpty()
@@ -18,12 +17,14 @@ const validacoes = [
 
 router.get('/', mainController.home)
 
-router.get('/login', loginController.login)
-router.post('/login',validacoes , loginController.loginUser)
+router.get('/login', loginController.login);
+router.post('/login', validacoes, loginController.loginUser);
+
+router.get('/register', registerController.renderRegister);
+router.post('/register', registerController.registerUser);
 
 router.get('/logout', mainController.logout)
 
-router.get('/register', mainController.register)
 router.get('/paineldousuario', mainController.painelDoUsuario)
 router.get('/listaDeDesejos', mainController.listaDeDesejos)
 router.get('/carrinho', mainController.carrinho)

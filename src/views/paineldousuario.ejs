@@ -22,7 +22,11 @@
     <main>
         <section class="container-info-user">
             <div class="ft-avatar"></div>
-            <h1 class="username"><%= user.name %></h1>
+            <h1 class="username"><% if(user == undefined){ %>
+
+              <% } else { %>
+                <%= user.name %>
+            <% } %></h1>
             <div class="div-edit-info">
 
                 <div class="edit-info">
@@ -93,11 +97,13 @@
             </div>
         </section>
         <div id="popup" class="popup">
-            <button class="popup-btn-x"><img src="/images/delete-icon.png" alt=""></button>
+            <div class="div-popup-btn">
+                <button class="popup-btn-x" id="popup-btn-x"><img src="/images/delete-icon.png" alt=""></button>
+            </div>
             <h2 class="popup-h2">Confirme sua compra</h2>
             <p class="popup-p">Imprima seu boleto abaixo para realizar sua compra</p>
             <p class="popup-p">*Obs: a compra só será confirmada após o pagamento</p>
-            <a href="" class="popup-a">Imprimir boleto</a>
+            <a href="/finalizeCompra" class="popup-a">Imprimir boleto</a>
         </div>
     </main>
     <%- include('./partials/footer') %>
