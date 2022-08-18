@@ -6,7 +6,7 @@ const {
   
   const registerController = {
     renderRegister: (req, res) => {
-      res.render('register');
+      res.render('register', {user: req.session.user});
     },
     registerUser: (req, res) => {
       const {
