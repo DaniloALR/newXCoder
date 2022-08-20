@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
       unique: true
     },
     num: {
-      type: dataTypes.STRING,
+      type: dataTypes.INTEGER,
       allowNull: false
     },
     complemento: {
@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false
     },
     cep: {
-      type: dataTypes.STRING,
+      type: dataTypes.INTEGER,
       allowNull: false
     },
     // type: {
@@ -48,6 +48,7 @@ module.exports = (sequelize, dataTypes) => {
   const Address = sequelize.define(alias, collumns, config);
   Address.associate = (models) => {
     Address.belongsTo(models.Users, {
+      constraint: true,
       foreignKey: "user_id"
     })
   }

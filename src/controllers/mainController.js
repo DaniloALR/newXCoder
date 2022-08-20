@@ -12,23 +12,20 @@ const mainController = {
 
         res.render('home')
     },
-    listaDeDesejos: (req,res)=>{
-        res.render('listaDeDesejos', {user: req.user})
-    },
     produtoInterno: (req,res)=>{
-        res.render('produtoInterno', {user: req.session.user})
+        res.render('produtoInterno', {user: req.user})
     },
     finalizeCompra: (req,res)=>{
-        res.render('finalizeCompra', {user: req.session.user})
+        res.render('finalizeCompra', {user: req.user})
     },
     listagemDeProduto: (req,res)=>{
-        res.render('listagemDeProduto', {user: req.session.user})
+        res.render('listagemDeProduto', {user: req.user})
     },
     carrinho: (req,res)=>{
-        res.render('carrinho', {user: req.session.user})
+        res.render('carrinho', {user: req.user})
     },
     painelDoUsuario: (req,res)=>{
-        res.render('paineldousuario', {user: req.session.user})
+        res.render('paineldousuario', {user: req.user})
     },
     logout: (req,res)=>{
         req.session.destroy()
