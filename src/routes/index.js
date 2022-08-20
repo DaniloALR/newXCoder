@@ -19,7 +19,6 @@ router.get('/listagemDeProduto', mainController.listagemDeProduto)
 router.use(verifyIfUserIsLogged)
 router.get('/', mainController.home)
 router.get('/paineldousuario', mainController.painelDoUsuario)
-router.get('/listaDeDesejos', mainController.listaDeDesejos)
 router.get('/carrinho', mainController.carrinho)
 router.get('/finalizeCompra', mainController.finalizeCompra)
 

@@ -12,30 +12,48 @@ const registerController = {
   },
   registerUser: (req, res) => {
     const {
-      name,
+      nome,
+      sobrenome,
       email,
-      password
+      senha,
+      rua,
+      bairro,
+      Cidade,
+      numero,
+      complemento,
+      cep
     } = req.body;
 
-    const passwordHash = bcrypt.hashSync(password, 10);
+    const passwordHash = bcrypt.hashSync(senha, 10);
     console.log(req.body)
 
-    Users.create({
-      nome: nome,
-      email: email.toLowerCase()
+     Users.create({
+      first_name: nome,
+      last_name: sobrenome,
+      senha: passwordHash,
+      email: email.toLowerCase(),
     }).then(function () {
       console.log('Cadastrado com sucesso!');
       req.session.success = true;
-      return res.redirect('/');
     }).catch(function (erro) {
-      console.log(`Ops, houve um erro: ${erro}`);
+      console.log(`Ops, houve um erro em Users: ${erro}`);
     })
 
-    if (nome == '' || typeof nome == undefined || nome == null) {
-      erros.push({
-        mensagem: "Campo nome não pode ser vazio!"
-      });
-    }
+     Address.create({
+        rua: rua,
+        bairro: bairro,
+        UF: Cidade,
+        num: numero,
+        complemento: complemento,
+        cep: cep
+      }).then(function () {
+        console.log('Cadastrado com sucesso!');
+        req.session.success = true;
+        return res.redirect('/');
+      }).catch(function (erro) {
+        console.log(`Ops, houve um erro em Address: ${erro}`);
+      })
+
     // Users.create({
     //   name,
     //   email,
