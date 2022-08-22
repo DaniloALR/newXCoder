@@ -227,6 +227,7 @@ h1{
     float: right;
     padding: 1px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .div-popup-btn{
     display: flex;

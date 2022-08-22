@@ -25,7 +25,6 @@ const registerController = {
     } = req.body;
 
     const passwordHash = bcrypt.hashSync(senha, 10);
-    console.log(req.body)
 
      Users.create({
       first_name: nome,

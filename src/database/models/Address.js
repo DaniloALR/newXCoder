@@ -48,7 +48,6 @@ module.exports = (sequelize, dataTypes) => {
   const Address = sequelize.define(alias, collumns, config);
   Address.associate = (models) => {
     Address.belongsTo(models.Users, {
-      constraint: true,
       foreignKey: "user_id"
     })
   }

@@ -56,7 +56,9 @@
     color: white;
 }
 .div-p{
-    margin-left: 43px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 .p-headset{
     font-weight: 400;

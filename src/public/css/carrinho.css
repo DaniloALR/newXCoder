@@ -1,6 +1,12 @@
 @import "header.css";
 @import "footer.css";
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .search-txt{
     border: none;
     background:none;
@@ -48,10 +54,8 @@ button.seta{
     .container-cep{
         display: flex;
         flex-direction: row;
-        justify-content: left;
-        margin-bottom:3rem;
+        margin: 25px 75% 3rem 1rem;
         flex-direction: column;
-        padding: 25px;
         color:white;
     }
     
@@ -178,4 +182,48 @@ button.seta{
         justify-content: space-between;
 
         margin-bottom: 4px;
+    }
+
+    .popup{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+    
+        gap: 30px;
+        background-color: #090909;
+    
+        width: 300px;
+        height: 320px;
+    
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid grey
+    }
+    .popup .popup-h2, .popup-p, .popup-a{
+        color: #fff;
+    }
+    .popup a{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .popup-btn-x img{
+        width: 20px;
+        background-color: transparent;
+        border-radius: 50%;
+    }
+    .popup-btn-x{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        padding: 1px;
+        border-radius: 50%;
+    }
+    .div-popup-btn{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin-right: 40px
     }
