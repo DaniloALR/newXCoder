@@ -5,6 +5,7 @@ const {
     Users,
     Address
 } = require("../database/models")
+const bcrypt = require('bcrypt')
 
 const loginController = {
     login: (req, res) => {
@@ -24,12 +25,18 @@ const loginController = {
                 email
             }
         })
-        
-        if(userExist.email !== email) {
+
+        if(!userExist) {
             return res.render('login', { erro: "~Usuário ou senha incorretos."})
         }
+        
+        // if(userExist.email !== email) {
+        //     return res.render('login', { erro: "~Usuário ou senha incorretos."})
+        // }
 
-        if (userExist.senha !== senha) {
+        const isPasswordCorrect = bcrypt.compareSync(senha, userExist.senha)
+
+        if (!isPasswordCorrect) {
             return res.render('login', { erro: "~Usuário ou senha incorretos."})
         }
 
@@ -44,8 +51,8 @@ const loginController = {
         if  (salvarInfo !== undefined){
             res.cookie('salvarInfo', userStringfy, {maxAge: 600000})
         };
-        
         return res.redirect('/');
+
     }
 }
 

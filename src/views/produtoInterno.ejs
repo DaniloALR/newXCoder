@@ -61,8 +61,12 @@
                 </div>
                 <div class="container-comprar-adc">
                     <div class="div-comprar-adc">
-                        <button type="button" href="/carrinho" class="btn-adc">Adicionar ao carrinho</button>
-                        <button type="button" href="/finalizeCompra" class="btn-buy">Comprar agora</button>
+                        <div class="div-btn-adc">
+                            <a type="submit" href="./carrinho" class="btn-adc">Adicionar ao carrinho</a>
+                        </div>
+                        <div class="div-btn-buy">
+                            <a type="submit" href="" id="btn-comprar" class="btn-buy">Comprar agora</a>
+                        </div>
                     </div>
                     <div>
 
@@ -72,8 +76,17 @@
                 </div>
                 <div class="divider-m"></div>
 
-                    <button type="button" formaction="http://localhost:3000/paineldousuario" class="btn-adc-lista-desejo">Adicionar à lista de desejo</button>
+                    <a href="/paineldousuario" class="btn-adc-lista-desejo">Adicionar à lista de desejo</a>
 
+            </div>
+            <div id="popup" class="popup">
+                <div class="div-popup-btn">
+                    <button class="popup-btn-x" id="popup-btn-x"><img src="/images/delete-icon.png" alt=""></button>
+                </div>
+                <h2 class="popup-h2">Confirme sua compra</h2>
+                <p class="popup-p">Imprima seu boleto abaixo para realizar sua compra</p>
+                <p class="popup-p">*Obs: a compra só será confirmada após o pagamento</p>
+                <a href="/finalizeCompra" class="popup-a">Imprimir boleto</a>
             </div>
         </section>
         <div class="divider"></div>
@@ -283,6 +296,7 @@
             
             
         </section>
+        <script src="/javascript/script.js"></script>
 
         <%- include('./partials/footer') %>
     </main>

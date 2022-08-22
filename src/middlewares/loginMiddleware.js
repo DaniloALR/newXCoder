@@ -5,15 +5,15 @@ const verifyIfUserIsLogged = (req, res, next) => {
         return res.redirect('/login');
     }
 
-    console.log(req.session.user)
-    console.log(req.cookies.salvarInfo)
+    // console.log(req.session.user)
+    // console.log(req.cookies.salvarInfo)
 
     // Se ele existir, deixo o middleware passar
     const user = req.session.user ? 
         JSON.parse(req.session.user) : 
         JSON.parse(req.cookies.salvarInfo)
 
-        console.log(user)
+        // console.log(user)
 
     req.user = user
 
