@@ -6,11 +6,12 @@
 
 const mainController = {
     home: (req,res)=> {
+        // console.log(req.user);
         if (req.user) {
-            res.render('home', {user: req.user})
+            return res.render('home', {user: req.user})
         }
 
-        res.render('home')
+        return res.render('home')
     },
     produtoInterno: (req,res)=>{
         res.render('produtoInterno', {user: req.user})
@@ -19,6 +20,7 @@ const mainController = {
         res.render('finalizeCompra', {user: req.user})
     },
     listagemDeProduto: (req,res)=>{
+        // console.log(req.user)
         res.render('listagemDeProduto', {user: req.user})
     },
     carrinho: (req,res)=>{

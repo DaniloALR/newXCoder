@@ -13,10 +13,11 @@ router.get('/register', registerController.renderRegister);
 router.post('/register', registerController.registerUser);
 
 router.get('/logout', mainController.logout)
+
+router.use(verifyIfUserIsLogged)
 router.get('/produtoInterno', mainController.produtoInterno)
 router.get('/listagemDeProduto', mainController.listagemDeProduto)
 
-router.use(verifyIfUserIsLogged)
 router.get('/', mainController.home)
 router.get('/paineldousuario', mainController.painelDoUsuario)
 router.get('/carrinho', mainController.carrinho)
