@@ -12,11 +12,11 @@
 
             <% if(typeof user==='undefined' ) {%>
                 <div class="container2">
-                    <a href="./login" class="login" name="login">Log in </a>
-                    <a href="./register" class="register" name="register"> Sign up</a>
+                    <a href="/login" class="login" name="login">Log in </a>
+                    <a href="/register" class="register" name="register"> Sign up</a>
                 </div>
                 <% } else { %>
-                    <a href="./paineldousuario" class="username">
+                    <a href="/paineldousuario" class="username">
                         <%= user.nome %>
                     </a>
                     <% } %>
@@ -40,12 +40,12 @@
     </div>
 
     <nav class="navbar">
-        <a id="colecionaveis" href="./listagemDeProduto">Colecionáveis</a>
-        <a id="informatica" href="./listagemDeProduto">Informática</a>
-        <a id="jogos" href="./listagemDeProduto">Jogos</a>
-        <a id="lancamentos" href="./listagemDeProduto">Lançamentos</a>
-        <a id="modas" href="./listagemDeProduto">Modas</a>
-        <a id="promoçoes" href="./listagemDeProduto">Promoções</a>
+        <a id="colecionaveis" href="/listagemDeProduto">Colecionáveis</a>
+        <a id="informatica" href="/listagemDeProduto">Informática</a>
+        <a id="jogos" href="/listagemDeProduto">Jogos</a>
+        <a id="lancamentos" href="/listagemDeProduto">Lançamentos</a>
+        <a id="modas" href="/listagemDeProduto">Modas</a>
+        <a id="promoçoes" href="/listagemDeProduto">Promoções</a>
     </nav>
 
 </header>

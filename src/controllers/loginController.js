@@ -24,12 +24,12 @@ const loginController = {
                 email
             }
         })
-
-        if(!userExist) {
+        
+        if(userExist.email !== email) {
             return res.render('login', { erro: "~Usuário ou senha incorretos."})
         }
 
-        if (userExist.senha !== parseInt(senha)) {
+        if (userExist.senha !== senha) {
             return res.render('login', { erro: "~Usuário ou senha incorretos."})
         }
 
@@ -40,11 +40,11 @@ const loginController = {
         })
                  
         req.session.user = userStringfy
-
+        
         if  (salvarInfo !== undefined){
             res.cookie('salvarInfo', userStringfy, {maxAge: 600000})
         };
-
+        
         return res.redirect('/');
     }
 }

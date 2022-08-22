@@ -41,11 +41,11 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <div class="product"></div>
+                                                    <div class="product"><img src="/images/headset-gamer.jpg" alt=""></div>
                                                 </td>
-                                                <td>Acer Nitro 5, SSD128GB, 16GbRam, RTX 3050</td>
+                                                <td>Headset gamer</td>
                                                 <td><input type="number"></td>
-                                                <td>R$ 4.500,00</td>
+                                                <td>R$ 250,00</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -60,14 +60,14 @@
                                             <p id="jogos" href="./menu/jogos" class="">
                                                 <strong>Produto</strong>
                                             </p>
-                                            <span>R$5.124,00</span>
+                                            <span>R$250,00</span>
                                         </div>
 
                                         <div class="flex-text">
                                             <p id="jogos" href="./menu/jogos" class="">
                                                 <strong>Frete</strong>
                                             </p>
-                                            <span>R$ 124,00</span>
+                                            <span>R$ 24,00</span>
                                         </div>
 
                                         <div class="flex-text">
@@ -82,14 +82,14 @@
                                         <div class="flex-text">
                                             <p id="jogos" href="./menu/jogos" class="">
                                                 <strong>Total</strong>
-                                            </p><span>R$ 5.124,00
+                                            </p><span>R$ 274,00
                                             </span>
                                         </div>
 
-                                        <p>Em 1x no cartão R$ 5.250,98 em até 12x</p>
+                                        <p>Em 1x no cartão R$ 250,00 em até 12x</p>
                                         <div class="divider-m"></div>
-                                        <form class="container-flex" action="/paineldousuario" method="get">
-                                            <input type="submit" value="Continuar" class="btn-continue">
+                                        <form class="container-flex" action="" method="get">
+                                            <input type="submit" value="Continuar" id="btn-comprar" class="btn-continue">
                                         </form>
                                         <p class="add-product">adicionar produtos</p>
                                     </div>
@@ -110,8 +110,20 @@
                                     </a>
                                 </div>
                             </div>
-
+                            
+                            <div id="popup" class="popup">
+                                <div class="div-popup-btn">
+                                    <button class="popup-btn-x" id="popup-btn-x"><img src="/images/delete-icon.png" alt=""></button>
+                                </div>
+                                <h2 class="popup-h2">Confirme sua compra</h2>
+                                <p class="popup-p">Imprima seu boleto abaixo para realizar sua compra</p>
+                                <p class="popup-p">*Obs: a compra só será confirmada após o pagamento</p>
+                                <a href="/finalizeCompra" class="popup-a">Imprimir boleto</a>
+                            </div>
+                            
                         </main>
+                        
+                        <script src="/javascript/script.js"></script>
                         <%- include('./partials/footer') %>
 </body>
 
